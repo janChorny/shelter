@@ -1,0 +1,72 @@
+/*----------------General styles-----------------------*/
+
+.wrapper {
+	//with cut bg
+	// max-width: 80rem;
+	// margin: 0 auto;
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+	//for sticky header disable overflow
+	overflow: clip;
+	background: radial-gradient(100% 215.42% at 0% 0%, $color-gradient--1 0%, $color-gradient--2 100%),
+		$color-gradient--3;
+		@media (max-width: 1280px){
+			max-width: 80rem;
+			margin: 0 auto;
+		}
+		// @media (max-width: 767px) {
+		// 	&.open {
+		// 		position: fixed;
+		// 	}
+		// }
+}
+
+.container {
+	//without cut bg
+	max-width: 80rem;
+	margin: 0 auto;
+	padding: 0 40px;
+		@media (max-width: 1280px){
+			padding: 0px;
+			
+		}
+}
+
+.btn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 207px;
+	height: 52px;
+	background: $color-btn;
+	border-radius: 100px;
+	font-family: Georgia-regular;
+	text-align: center;
+	font-weight: 400;
+	font-size: 1.0625rem;
+	line-height: 130%;
+	letter-spacing: 0.06em;
+
+	&__link {
+		color: $color-text-links-light--hover;
+	}
+}
+
+.btn:hover {
+	background: $color-btn--hover;
+	cursor: pointer;
+}
+
+.btn--transparent {
+	border: 2px solid $color-btn;
+	background: transparent;
+	width: 187px;
+}
+
+/*----------------Main-----------------------*/
+
+.main {
+	flex: 1 1 auto;
+	background: #f6f6f6;
+}
