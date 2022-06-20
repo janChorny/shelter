@@ -169,5 +169,3 @@ popupOpenCards.forEach(element => {
 });
 popupCloseButton.addEventListener('click', popupClose);
 popupOverlay.addEventListener('click', popupClose);
-
-console.log(`итог 35 баллов, слайдер и пагинация не сделаны`);

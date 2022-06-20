@@ -115,80 +115,7 @@ const generalArray = [
 		"diseases": ["deafness", "blindness"],
 		"parasites": ["lice", "fleas"]
 	}
-]
-
-// slider
-// const carouselBlock = document.querySelector('.our-friends__block');
-// const leftArrow = document.querySelector('.our-friends__arrow--left');
-// const rightArrow = document.querySelector('.our-friends__arrow--right');
-// const carouselWrapper = document.querySelector('.our-friends__carousel-wrapper');
-// const carousel = document.querySelector('.gallery-our-friends');
-// const carouselItem = document.querySelector('.gallery-our-friends__item');
-// const carouselCards = document.querySelectorAll('.gallery-our-friends__card');
-// const cardImage = document.querySelectorAll('.gallery-our-friends__picture');
-// const cardTitle = document.querySelectorAll('.gallery-our-friends__title');
-// const cardBtn = document.querySelectorAll('.btn--transparent');
-
-// function itemAdd() {
-// 	let newItem = document.createElement('div');
-// 	let newCard = document.createElement('div');
-// 	let newCardTwo = document.createElement('div');
-// 	let newCardThree = document.createElement('div');
-// 	let newCardImage = document.createElement('img');
-// 	let newCardImageTwo = document.createElement('img');
-// 	let newCardImageThree = document.createElement('img');
-// 	let newCardTittle = document.createElement('h4');
-// 	let newCardTittleTwo = document.createElement('h4');
-// 	let newCardTittleThree = document.createElement('h4');
-// 	let newCardButton = document.createElement('div');
-// 	carousel.append(newItem);
-// 	carousel.prepend(newItem);
-// 	newItem.classList.add('gallery-our-friends__item');
-// 	for (let i = 0; i < generalArray.length; i+3){
-// 		newItem.append(newCard);
-// 		newItem.append(newCardTwo);
-// 		newItem.append(newCardThree);
-// 		newCard.classList.add('gallery-our-friends__card');
-// 		newCardTwo.classList.add('gallery-our-friends__card');
-// 		newCardThree.classList.add('gallery-our-friends__card');
-// 		newCard.append(newCardImage);
-// 		newCardTwo.append(newCardImageTwo);
-// 		newCardThree.append(newCardImageThree);
-// 		newCardImage.src = generalArray[i]["img"];
-// 		newCardImageTwo.src = generalArray[i+1]["img"];
-// 		newCardImageThree.src = generalArray[i+2]["img"];
-// 		newCardImage.classList.add('gallery-our-friends__picture');
-// 		newCardImageTwo.classList.add('gallery-our-friends__picture');
-// 		newCardImageThree.classList.add('gallery-our-friends__picture');
-// 		newCard.append(newCardTittle);
-// 		newCardTwo.append(newCardTittleTwo);
-// 		newCardThree.append(newCardTittleThree);
-// 		newCardTittle.textContent = generalArray[i]["name"];
-// 		newCardTittleTwo.textContent = generalArray[i+1]["name"];
-// 		newCardTittleThree.textContent = generalArray[i+2]["name"];
-// 		newCardTittle.classList.add('gallery-our-friends__title');
-// 		newCardTittleTwo.classList.add('gallery-our-friends__title');
-// 		newCardTittleThree.classList.add('gallery-our-friends__title');
-// 		newCard.append(newCardButton);
-// 		newCardTwo.append(newCardButton);
-// 		newCardThree.append(newCardButton);
-// 		newCardButton.textContent = "Learn more";
-// 		newCardButton.classList.add('btn');
-// 		newCardButton.classList.add('btn--transparent');
-// 	}
-// }
-
-// function moveCardsLeft() {
-// 	carousel.classList.add('transition-left');
-// }
-// function moveCardsRight() {
-// 	carousel.classList.add('transition-right');
-// }
-
-// // leftArrow.addEventListener('click', itemAdd);
-// // rightArrow.addEventListener('click', itemAdd);
-// leftArrow.addEventListener('click', moveCardsLeft);
-// rightArrow.addEventListener('click', moveCardsRight);
+];
 
 //popup
 const galleryOurFriendsItem = document.querySelector('.gallery-our-friends__item');
@@ -240,5 +167,3 @@ popupOpenCards.forEach(element => {
 });
 popupCloseButton.addEventListener('click', popupClose);
 popupOverlay.addEventListener('click', popupClose);
-
-console.log(`итог 35 баллов, слайдер и пагинация не сделаны`);
