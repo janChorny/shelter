@@ -95,7 +95,7 @@ const generalArray = [
 	},
 	{
 		"name": "Freddie",
-		"img": "../../assets/images/pets-fredie_no-bg.webp",
+		"img": "../../assets/images/pets-freddie_no-bg.webp",
 		"type": "Cat",
 		"breed": "British Shorthair",
 		"description": "Freddie is a little shy at first, but very sweet when he warms up. He likes playing with shoe strings and bottle caps. He is quick to learn the rhythms of his human’s daily life. Freddie has bounced around a lot in his life, and is looking to find his forever home.",
@@ -167,3 +167,27 @@ popupOpenCards.forEach(element => {
 });
 popupCloseButton.addEventListener('click', popupClose);
 popupOverlay.addEventListener('click', popupClose);
+
+//slider
+// const slider = document.querySelector('.gallery-our-friends__item');
+// const sliderItems = document.querySelectorAll('.gallery-our-friends__card');
+// const rightSliderButton = document.querySelector('.our-friends__arrow--right');
+
+// function generateSliderItem() {
+//   const newCards = generalArray.filter(e => ![...sliderItems].map(item => item.childNodes[3].innerText).includes(e.name))
+//   newCards.forEach(item => {
+//     const newElement = document.createElement('div');
+//     newElement.classList.add('gallery-our-friends__card');
+//     newElement.setAttribute('data-name', `${item.name}`)
+//     newElement.innerHTML = `<img src="${item.img}" alt="${item.name}" class="gallery-our-friends__picture">
+//                             <h4 class="gallery-our-friends__title">${item.name}</h4>
+//                             <div class="btn btn--transparent"><a href="javascript:void(0);" class="btn__link">Learn more</a></div>`
+//     slider.append(newElement);
+//   })
+//   slider.style.animation = `1s linear slideIn`;
+// }
+
+
+// rightSliderButton.addEventListener('click', generateSliderItem)
+
+
