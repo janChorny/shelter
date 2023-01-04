@@ -8,6 +8,9 @@
   <link rel="icon" href="../../assets/images/favicon.ico">
   <link rel="stylesheet" href="./css/style.css">
   <title>Main</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+  
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 </head>
 
 <body>
@@ -81,7 +84,40 @@
             Our friends who<br />
             are looking for a house
           </h3>
-          <div class="our-friends__block">
+
+          <!-- Slider main container -->
+          <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper gallery-our-friends__item">
+              <!-- Slides -->
+              <div class="swiper-slide gallery-our-friends__card" data-name="Katrine">
+                <img src="../../assets/images/pets-katrine_no_bg.webp" alt="Cat" class="gallery-our-friends__picture">
+                <h4 class="gallery-our-friends__title">Katrine</h4>
+                <div class="btn btn--transparent"><a href="javascript:void(0);" class="btn__link">Learn more</a></div>
+              </div>
+              <div class="swiper-slide gallery-our-friends__card" data-name="Jennifer">
+                <img src="../../assets/images/pets-jennifer_no_bg.webp" alt="Puppy" class="gallery-our-friends__picture">
+                <h4 class="gallery-our-friends__title">Jennifer</h4>
+                <div class="btn btn--transparent"><a href="javascript:void(0);" class="btn__link popup-link">Learn more</a></div>
+              </div>
+              <div class="swiper-slide gallery-our-friends__card" data-name="Woody">
+                  <img src="../../assets/images/pets-woody_no_bg.webp" alt="Dog" class="gallery-our-friends__picture">
+                  <h4 class="gallery-our-friends__title">Woody</h4>
+                  <div class="btn btn--transparent"><a href="javascript:void(0);" class="btn__link">Learn more</a></div>
+              </div>
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+          
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          
+            <!-- If we need scrollbar -->
+            <div class="swiper-scrollbar"></div>
+          </div>
+
+          <!-- <div class="our-friends__block">
             <div class="our-friends__arrow our-friends__arrow--left">
               <img src="../../assets/icons/Arrow_left.svg" alt="Arrow left">
             </div>
@@ -109,7 +145,7 @@
             <div class="our-friends__arrow our-friends__arrow--right">
               <img src="../../assets/icons/Arrow_right.svg" alt="Arrow right">
             </div>
-          </div>
+          </div> -->
           <div class="our-friends__btn btn"><a href="../pets/index.html" class="btn__link">Get to know the rest</a></div>
         </div>
       </section>

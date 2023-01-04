@@ -1182,7 +1182,7 @@ h6 {
 }
 
 .our-friends__btn {
-  margin: 0 auto;
+  margin: 50px auto 0 auto;
   width: 261px;
 }
 
@@ -1194,6 +1194,10 @@ h6 {
 
 .gallery-our-friends {
   position: relative;
+}
+
+.gallery-our-friends__item {
+  margin-bottom: 50px;
 }
 
 .gallery-our-friends__card {
@@ -1503,84 +1507,17 @@ h6 {
   z-index: 2;
 }
 
-.item-active {
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 90px;
-  margin-bottom: 60px;
+.swiper {
   width: 990px;
-  outline: 1px solid red;
+  height: 700px;
 }
 
-@media (max-width: 1200px) {
-  .item-active {
-    gap: 50px;
-    max-height: 435px;
-  }
+.swiper {
+  z-index: auto !important;
 }
 
-@media (max-width: 768px) {
-  .item-active {
-    gap: 40px;
-  }
-}
-
-@media (max-width: 765px) {
-  .item-active {
-    margin-bottom: 10px;
-  }
-}
-
-@-webkit-keyframes move-left {
-  from {
-    left: 0px;
-  }
-  to {
-    left: 380px;
-  }
-}
-
-@keyframes move-left {
-  from {
-    left: 0px;
-  }
-  to {
-    left: 380px;
-  }
-}
-
-.transition-right {
-  -webkit-animation-name: move-left;
-          animation-name: move-left;
-  -webkit-animation-duration: 3s;
-          animation-duration: 3s;
-}
-
-@-webkit-keyframes move-right {
-  from {
-    left: 0px;
-  }
-  to {
-    left: -380px;
-  }
-}
-
-@keyframes move-right {
-  from {
-    left: 0px;
-  }
-  to {
-    left: -380px;
-  }
-}
-
-.transition-left {
-  -webkit-animation-name: move-right;
-          animation-name: move-right;
-  -webkit-animation-duration: 3s;
-          animation-duration: 3s;
+.swiper-wrapper {
+  z-index: auto !important;
 }
 
 /*----------------Help----------------------*/
