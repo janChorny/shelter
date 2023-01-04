@@ -119,23 +119,26 @@
 .gallery-our-friends {
 position: relative;
 
-		&__item{
-			display: flex;
-			gap: 90px;
-			margin-bottom: 60px;
-			// justify-content: center;
-			// overflow: hidden;
-			@media (max-width:1200px) {
-				gap: 50px;
-				max-height: 435px;
-			}
-			@media (max-width:768px) {
-				gap: 40px;
-			}
-			@media (max-width:765px) {
-				margin-bottom: 10px;
-			}
-		}
+		// &__item{
+    //   position: relative;
+		// 	display: flex;
+		// 	gap: 90px;
+		// 	margin-bottom: 60px;
+    //   width: 990px;
+    //   outline: 1px solid red;
+		// 	// justify-content: center;
+		// 	// overflow: hidden;
+		// 	@media (max-width:1200px) {
+		// 		gap: 50px;
+		// 		max-height: 435px;
+		// 	}
+		// 	@media (max-width:768px) {
+		// 		gap: 40px;
+		// 	}
+		// 	@media (max-width:765px) {
+		// 		margin-bottom: 10px;
+		// 	}
+		// }
 
 		&__card {
 			background: $color-bg--3;
@@ -189,33 +192,6 @@ position: relative;
 			color: $color-text-title--section;
 		}
 	}
-
-// slider 
-
-@keyframes move-left {
-	from {left: 0px;}
-	to {left:990px;}
-}	
-
-.transition-right {
-	animation-name: move-left;
-	animation-duration: 3s;
-}
-
-@keyframes move-right {
-	from {
-		left: 0px;
-	}
-
-	to {
-		left: -990px;
-	}
-}
-
-.transition-left {
-	animation-name: move-right;
-	animation-duration: 3s;
-}
 
 //popup
 
@@ -433,12 +409,57 @@ position: relative;
 	}
 }
 
-@keyframes slideIn {
+// slider 
+.item-active{
+position: relative;
+  display: flex;
+  gap: 90px;
+  margin-bottom: 60px;
+  width: 990px;
+  outline: 1px solid red;
+
+  // justify-content: center;
+  // overflow: hidden;
+  @media (max-width:1200px) {
+    gap: 50px;
+    max-height: 435px;
+  }
+
+  @media (max-width:768px) {
+    gap: 40px;
+  }
+
+  @media (max-width:765px) {
+    margin-bottom: 10px;
+  }
+}
+
+@keyframes move-left {
   from {
-    transform: translateX(0);
+    left: 0px;
   }
 
   to {
-    transform: translateX(-380px);
+    left: 380px;
   }
+}
+
+.transition-right {
+  animation-name: move-left;
+  animation-duration: 3s;
+}
+
+@keyframes move-right {
+  from {
+    left: 0px;
+  }
+
+  to {
+    left: -380px;
+  }
+}
+
+.transition-left {
+  animation-name: move-right;
+  animation-duration: 3s;
 }

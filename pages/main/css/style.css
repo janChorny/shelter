@@ -1,26 +1,26 @@
 @font-face {
   font-family: Arial-regular;
-  src: url("/janchorny-JSFE2022Q1/shelter/assets/fonts/Arial/Arial_regular.ttf");
+  src: url("../../../assets/fonts/Arial/Arial_regular.ttf");
 }
 
 @font-face {
   font-family: Arial-italic;
-  src: url("/janchorny-JSFE2022Q1/shelter/assets/fonts/Arial/Arial_italic.ttf");
+  src: url("../../../assets/fonts/Arial/Arial_italic.ttf");
 }
 
 @font-face {
   font-family: Georgia-regular;
-  src: url("/janchorny-JSFE2022Q1/shelter/assets/fonts/Georgia/georgia_regular.ttf");
+  src: url("../../../assets/fonts/Georgia/georgia_regular.ttf");
 }
 
 @font-face {
   font-family: Georgia-bold;
-  src: url("/janchorny-JSFE2022Q1/shelter/assets/fonts/Georgia/georgia_bold.ttf");
+  src: url("../../../assets/fonts/Georgia/georgia_bold.ttf");
 }
 
 @font-face {
   font-family: Georgia-italic;
-  src: url("/janchorny-JSFE2022Q1/shelter/assets/fonts/Georgia/georgia_italic.ttf");
+  src: url("../../../assets/fonts/Georgia/georgia_italic.ttf");
 }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -1196,33 +1196,6 @@ h6 {
   position: relative;
 }
 
-.gallery-our-friends__item {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 90px;
-  margin-bottom: 60px;
-}
-
-@media (max-width: 1200px) {
-  .gallery-our-friends__item {
-    gap: 50px;
-    max-height: 435px;
-  }
-}
-
-@media (max-width: 768px) {
-  .gallery-our-friends__item {
-    gap: 40px;
-  }
-}
-
-@media (max-width: 765px) {
-  .gallery-our-friends__item {
-    margin-bottom: 10px;
-  }
-}
-
 .gallery-our-friends__card {
   background: #FAFAFA;
   width: 270px;
@@ -1285,56 +1258,6 @@ h6 {
   line-height: 115%;
   letter-spacing: 0.06em;
   color: #545454;
-}
-
-@-webkit-keyframes move-left {
-  from {
-    left: 0px;
-  }
-  to {
-    left: 990px;
-  }
-}
-
-@keyframes move-left {
-  from {
-    left: 0px;
-  }
-  to {
-    left: 990px;
-  }
-}
-
-.transition-right {
-  -webkit-animation-name: move-left;
-          animation-name: move-left;
-  -webkit-animation-duration: 3s;
-          animation-duration: 3s;
-}
-
-@-webkit-keyframes move-right {
-  from {
-    left: 0px;
-  }
-  to {
-    left: -990px;
-  }
-}
-
-@keyframes move-right {
-  from {
-    left: 0px;
-  }
-  to {
-    left: -990px;
-  }
-}
-
-.transition-left {
-  -webkit-animation-name: move-right;
-          animation-name: move-right;
-  -webkit-animation-duration: 3s;
-          animation-duration: 3s;
 }
 
 .popup {
@@ -1580,26 +1503,84 @@ h6 {
   z-index: 2;
 }
 
-@-webkit-keyframes slideIn {
-  from {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-  }
-  to {
-    -webkit-transform: translateX(-380px);
-            transform: translateX(-380px);
+.item-active {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 90px;
+  margin-bottom: 60px;
+  width: 990px;
+  outline: 1px solid red;
+}
+
+@media (max-width: 1200px) {
+  .item-active {
+    gap: 50px;
+    max-height: 435px;
   }
 }
 
-@keyframes slideIn {
+@media (max-width: 768px) {
+  .item-active {
+    gap: 40px;
+  }
+}
+
+@media (max-width: 765px) {
+  .item-active {
+    margin-bottom: 10px;
+  }
+}
+
+@-webkit-keyframes move-left {
   from {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
+    left: 0px;
   }
   to {
-    -webkit-transform: translateX(-380px);
-            transform: translateX(-380px);
+    left: 380px;
   }
+}
+
+@keyframes move-left {
+  from {
+    left: 0px;
+  }
+  to {
+    left: 380px;
+  }
+}
+
+.transition-right {
+  -webkit-animation-name: move-left;
+          animation-name: move-left;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+}
+
+@-webkit-keyframes move-right {
+  from {
+    left: 0px;
+  }
+  to {
+    left: -380px;
+  }
+}
+
+@keyframes move-right {
+  from {
+    left: 0px;
+  }
+  to {
+    left: -380px;
+  }
+}
+
+.transition-left {
+  -webkit-animation-name: move-right;
+          animation-name: move-right;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
 }
 
 /*----------------Help----------------------*/

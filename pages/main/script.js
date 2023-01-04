@@ -168,10 +168,13 @@ popupOpenCards.forEach(element => {
 popupCloseButton.addEventListener('click', popupClose);
 popupOverlay.addEventListener('click', popupClose);
 
-//slider
-// const slider = document.querySelector('.gallery-our-friends__item');
+const slider = document.querySelector('.gallery-our-friends__item');
+const slideLeftItem = document.querySelector('.item-left');
+const slideActiveItem = document.querySelector('.item-active');
+const sliderRightItem = document.querySelector('.item-right');
 // const sliderItems = document.querySelectorAll('.gallery-our-friends__card');
-// const rightSliderButton = document.querySelector('.our-friends__arrow--right');
+const rightSliderButton = document.querySelector('.our-friends__arrow--right');
+const leftSliderButton = document.querySelector('.our-friends__arrow--left');
 
 // function generateSliderItem() {
 //   const newCards = generalArray.filter(e => ![...sliderItems].map(item => item.childNodes[3].innerText).includes(e.name))
@@ -191,3 +194,61 @@ popupOverlay.addEventListener('click', popupClose);
 // rightSliderButton.addEventListener('click', generateSliderItem)
 
 
+// function generateStartItems(num) {
+//   generalArray.sort(() => 0.5 - Math.random()).slice(0, num).forEach(item => {
+//       const newElement = document.createElement('div');
+//       newElement.classList.add('gallery-our-friends__card');
+//       newElement.setAttribute('data-name', `${item.name}`)
+//       newElement.innerHTML = `<img src="${item.img}" alt="${item.name}" class="gallery-our-friends__picture">
+//                             <h4 class="gallery-our-friends__title">${item.name}</h4>
+//                             <div class="btn btn--transparent"><a href="javascript:void(0);" class="btn__link">Learn more</a></div>`
+//       slider.append(newElement);
+//   })
+// }
+
+// generateStartItems(3)
+
+// function moveLeft() {
+//   slider.classList.add('transition-left');
+//   leftSliderButton.removeEventListener('click', moveLeft);
+//   rightSliderButton.removeEventListener('click', moveRight);
+// }
+
+// function moveRight() {
+//   slider.classList.add('transition-right');
+//   leftSliderButton.removeEventListener('click', moveLeft);
+//   rightSliderButton.removeEventListener('click', moveRight);
+// }
+
+// rightSliderButton.addEventListener('click', moveRight);
+// leftSliderButton.addEventListener('click', moveLeft);
+
+// slider.addEventListener("animationend", (animationEvent) => {
+//   let changedItem;
+//   if (animationEvent.animationName === "move-left") {
+//     slider.classList.remove("transition-left");
+//     changedItem = slideLeftItem;
+//     document.querySelector(".item-active").innerHTML = slideLeftItem.innerHTML;
+//   } else {
+//     slider.classList.remove("transition-right");
+//     changedItem = sliderRightItem;
+//     document.querySelector(".item-active").innerHTML = sliderRightItem.innerHTML;
+//   }
+
+//   changedItem.innerHTML = "";
+
+//   generalArray.sort(() => 0.5 - Math.random()).slice(0, 3).map(item => {
+//     const newElement = document.createElement('div');
+//     newElement.classList.add('gallery-our-friends__card');
+//     newElement.setAttribute('data-name', `${item.name}`)
+//     newElement.innerHTML = `<img src="${item.img}" alt="${item.name}" class="gallery-our-friends__picture">
+//                             <h4 class="gallery-our-friends__title">${item.name}</h4>
+//                             <div class="btn btn--transparent"><a href="javascript:void(0);" class="btn__link">Learn more</a></div>`
+//     changedItem.appendChild(newElement);
+//     })
+  
+  
+
+//   leftSliderButton.addEventListener("click", moveLeft);
+//   rightSliderButton.addEventListener("click", moveRight);
+// })
