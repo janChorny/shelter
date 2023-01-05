@@ -61,11 +61,11 @@ const generalArray = [
 		"parasites": ["none"]
 	},
 	{
-		"name": "Scarlett",
+		"name": "Scarlet",
 		"img": "../../assets/images/pets-scarlet_no-bg.webp",
 		"type": "Dog",
 		"breed": "Jack Russell Terrier",
-		"description": "Scarlett is a happy, playful girl who will make you laugh and smile. She forms a bond quickly and will make a loyal companion and a wonderful family dog or a good companion for a single individual too since she likes to hang out and be with her human.",
+		"description": "Scarlet is a happy, playful girl who will make you laugh and smile. She forms a bond quickly and will make a loyal companion and a wonderful family dog or a good companion for a single individual too since she likes to hang out and be with her human.",
 		"age": "3 months",
 		"inoculations": ["parainfluenza"],
 		"diseases": ["none"],
@@ -105,11 +105,11 @@ const generalArray = [
 		"parasites": ["none"]
 	},
 	{
-		"name": "Charly",
+		"name": "Charley",
 		"img": "../../assets/images/pets-charly.webp",
 		"type": "Dog",
 		"breed": "Jack Russell Terrier",
-		"description": "This cute boy, Charly, is three years old and he likes adults and kids. He isn’t fond of many other dogs, so he might do best in a single dog home. Charly has lots of energy, and loves to run and play. We think a fenced yard would make him very happy.",
+    "description": "This cute boy, Charley, is three years old and he likes adults and kids. He isn’t fond of many other dogs, so he might do best in a single dog home. Charly has lots of energy, and loves to run and play. We think a fenced yard would make him very happy.",
 		"age": "8 years",
 		"inoculations": ["bordetella bronchiseptica", "leptospirosis"],
 		"diseases": ["deafness", "blindness"],
@@ -258,24 +258,51 @@ const swiper = new Swiper('.swiper', {
   direction: 'horizontal',
   loop: true,
 
-  // If we need pagination
-  pagination: {
-    el: '.swiper-pagination',
-  },
-
   // Navigation arrows
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
 
-  // And if we need scrollbar
-  scrollbar: {
-    el: '.swiper-scrollbar',
-    draggable: true,
-  },
-
   slidesPerView: 3,
   spaceBetween: 90,
-  autoHeight: true,
+  hashNavigation: {
+    watchState: true,
+  },
+  keyboard: {
+    enabled: true,
+    onlyInViewport: true,
+  },
+  mousewheel: {
+    eventsTarget: '.swiper',
+  },
+  watchOverflow: true,
+  centeredSlides: true,
+  initialSlide: 1,
+  effect: 'coverflow',
+  coverflowEffect: {
+    rotate: 30,
+    slideShadows: true,
+  },
+  breakpoints: {
+    // when window width is >= 320px
+    320: {
+      spaceBetween: 10
+    },
+    480: {
+      spaceBetween: 20
+    },
+    500: {
+      spaceBetween: 30
+    },
+    800: {
+      spaceBetween: 60
+    },
+    950: {
+      spaceBetween: 90
+    },
+    1010: {
+      spaceBetween: 110
+    }
+  }
 });

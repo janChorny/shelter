@@ -2,15 +2,13 @@
 
 .our-friends {
 	background: $color-bg--2;
-	// padding: 80px 40px 100px 40px;
-	//padding: 6.25% 3.125% 7.8125% 3.125%;
 	padding: 80px 0 100px 0;
 	@media (max-width: 320px){
 		padding: 42px 0px 42px 0px;
 	}
 
 		&__container {
-			text-align: center;
+			text-align: center;;
 		}
 
 		&__title {
@@ -27,84 +25,6 @@
 				font-size: 1.5625rem;
 				margin-bottom: 42px;
 			}
-		}
-
-		&__block {
-			display: flex;
-			justify-content: space-between;
-			align-items: center;
-			// overflow: hidden;
-			@media (max-width:768px){
-				gap: 10px;
-				margin: 0 -10px;
-			}
-				@media (max-width:440px){
-				flex-direction: column;
-			}
-		}
-
-		&__block--move-left {
-			transform: translateX(-270px);
-		}
-
-		&__arrow {
-			min-width: 52px;
-			min-height: 52px;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			border: 2px solid $color-btn;
-			box-sizing: border-box;
-			border-radius: 100px;
-			margin-top:-60px;
-				@media (max-width:440px){
-				order: 2;
-				margin-top:0px;
-			}
-		}
-
-		&__arrow--left{
-			@media (max-width:1280px){
-				margin-right: 10px;
-			}
-			@media (max-width:768px){
-				margin-right: 0px;
-			}
-			@media (max-width:440px){
-				align-self: start;
-				margin: 0px 0px 0px 68px;
-				
-			}
-		}
-
-		&__arrow--right{
-			@media (max-width:1280px){
-				margin-left: 10px;
-			}
-			@media (max-width:768px){
-				margin-left: 0px;
-			}
-			@media (max-width:440px){
-				align-self: end;
-				margin: -62px 68px 0px 0px;
-			}
-		}
-
-
-		&__arrow:hover {
-			background: $color-btn--hover;
-		}
-
-		&__arrow:active {
-			background: $color-btn;
-		}
-
-		&__carousel-wrapper{
-			overflow: hidden;
-			width: 990px;
-		}
-
-		&__gallery {
 		}
 
 		&__btn{
@@ -125,7 +45,8 @@ position: relative;
 
 		&__card {
 			background: $color-bg--3;
-			width: 270px;
+			max-width: 270px;
+      overflow: hidden;
 			display: flex;
 			flex-direction: column;
 			justify-content: space-between;
@@ -139,19 +60,6 @@ position: relative;
 			cursor: pointer;
 		}
 
-		&__card:nth-child(3) {
-			@media (max-width:1279px){
-				display: none;
-			}
-		}
-		&__card:nth-child(2) {
-			@media (max-width:767px) {
-				display: none;
-			}
-		}
-		&__card--move-left{
-			transform: translateX(-270px);
-		}
 		&__card:hover{
 			cursor: pointer;
 			.gallery-our-friends__picture {
@@ -163,6 +71,7 @@ position: relative;
 		}
 
 		&__picture {
+      max-width: 100%;
 		}
 
 		&__title {
@@ -392,10 +301,11 @@ position: relative;
 	}
 }
 
-// slider 
+// slider
 .swiper {
-  width: 990px;
-  height: 700px;
+  max-width: 990px;
+  // min-width: 0;
+  // height: 700px;
 }
 
 .swiper {
@@ -404,4 +314,11 @@ position: relative;
 
 .swiper-wrapper {
   z-index: auto !important;
+}
+
+.swiper .swiper-pagination-bullet {
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  font-size: 14px;
 }
