@@ -1136,6 +1136,21 @@ h6 {
   color: #545454;
 }
 
+@media (max-width: 488px) {
+  .btn__link {
+    visibility: hidden;
+    position: relative;
+  }
+  .btn__link:after {
+    visibility: visible;
+    position: absolute;
+    top: 0;
+    left: 25%;
+    content: "More";
+  }
+}
+
+/*--------------popup----------------*/
 .popup {
   position: fixed;
   width: 100%;
@@ -1266,6 +1281,7 @@ h6 {
 @media (max-width: 440px) {
   .popup__description {
     padding: 10px;
+    word-break: break-all;
   }
 }
 
@@ -1379,6 +1395,7 @@ h6 {
   z-index: 2;
 }
 
+/*--------------slider----------------*/
 .swiper {
   max-width: 990px;
 }

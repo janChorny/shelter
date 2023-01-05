@@ -1,7 +1,8 @@
 'use strict'
 const body = document.querySelector('body');
 
-//hamburger menu
+/*---------------burger-menu----------------*/
+
 const hamburger = document.querySelector('.hamburger');
 const headerList = document.querySelector('.header__list');
 const navLinks = document.querySelectorAll('.header__item');
@@ -24,7 +25,7 @@ hamburger.addEventListener('click', toggleMenu);
 hamburgerOverlay.addEventListener('click', closeMenu);
 navLinks.forEach((el) => el.addEventListener('click', closeMenu));
 
-//general array
+/*---------------general-array----------------*/
 
 const generalArray = [
 	{
@@ -117,7 +118,8 @@ const generalArray = [
 	}
 ];
 
-//popup
+/*---------------popup----------------*/
+
 const galleryOurFriendsItem = document.querySelector('.gallery-our-friends__item');
 const popup = document.querySelector('.popup');
 const popupOverlay = document.querySelector('.popup__overlay');
@@ -159,7 +161,7 @@ galleryOurFriendsItem.addEventListener('click', function (event) {
 		}
 	};
 	popupOpen();
-}
+  }
 )
 
 popupOpenCards.forEach(element => {
@@ -168,97 +170,17 @@ popupOpenCards.forEach(element => {
 popupCloseButton.addEventListener('click', popupClose);
 popupOverlay.addEventListener('click', popupClose);
 
-const slider = document.querySelector('.gallery-our-friends__item');
-const slideLeftItem = document.querySelector('.item-left');
-const slideActiveItem = document.querySelector('.item-active');
-const sliderRightItem = document.querySelector('.item-right');
-// const sliderItems = document.querySelectorAll('.gallery-our-friends__card');
-const rightSliderButton = document.querySelector('.our-friends__arrow--right');
-const leftSliderButton = document.querySelector('.our-friends__arrow--left');
-
-// function generateSliderItem() {
-//   const newCards = generalArray.filter(e => ![...sliderItems].map(item => item.childNodes[3].innerText).includes(e.name))
-//   newCards.forEach(item => {
-//     const newElement = document.createElement('div');
-//     newElement.classList.add('gallery-our-friends__card');
-//     newElement.setAttribute('data-name', `${item.name}`)
-//     newElement.innerHTML = `<img src="${item.img}" alt="${item.name}" class="gallery-our-friends__picture">
-//                             <h4 class="gallery-our-friends__title">${item.name}</h4>
-//                             <div class="btn btn--transparent"><a href="javascript:void(0);" class="btn__link">Learn more</a></div>`
-//     slider.append(newElement);
-//   })
-//   slider.style.animation = `1s linear slideIn`;
-// }
-
-
-// rightSliderButton.addEventListener('click', generateSliderItem)
-
-
-// function generateStartItems(num) {
-//   generalArray.sort(() => 0.5 - Math.random()).slice(0, num).forEach(item => {
-//       const newElement = document.createElement('div');
-//       newElement.classList.add('gallery-our-friends__card');
-//       newElement.setAttribute('data-name', `${item.name}`)
-//       newElement.innerHTML = `<img src="${item.img}" alt="${item.name}" class="gallery-our-friends__picture">
-//                             <h4 class="gallery-our-friends__title">${item.name}</h4>
-//                             <div class="btn btn--transparent"><a href="javascript:void(0);" class="btn__link">Learn more</a></div>`
-//       slider.append(newElement);
-//   })
-// }
-
-// generateStartItems(3)
-
-// function moveLeft() {
-//   slider.classList.add('transition-left');
-//   leftSliderButton.removeEventListener('click', moveLeft);
-//   rightSliderButton.removeEventListener('click', moveRight);
-// }
-
-// function moveRight() {
-//   slider.classList.add('transition-right');
-//   leftSliderButton.removeEventListener('click', moveLeft);
-//   rightSliderButton.removeEventListener('click', moveRight);
-// }
-
-// rightSliderButton.addEventListener('click', moveRight);
-// leftSliderButton.addEventListener('click', moveLeft);
-
-// slider.addEventListener("animationend", (animationEvent) => {
-//   let changedItem;
-//   if (animationEvent.animationName === "move-left") {
-//     slider.classList.remove("transition-left");
-//     changedItem = slideLeftItem;
-//     document.querySelector(".item-active").innerHTML = slideLeftItem.innerHTML;
-//   } else {
-//     slider.classList.remove("transition-right");
-//     changedItem = sliderRightItem;
-//     document.querySelector(".item-active").innerHTML = sliderRightItem.innerHTML;
-//   }
-
-//   changedItem.innerHTML = "";
-
-//   generalArray.sort(() => 0.5 - Math.random()).slice(0, 3).map(item => {
-//     const newElement = document.createElement('div');
-//     newElement.classList.add('gallery-our-friends__card');
-//     newElement.setAttribute('data-name', `${item.name}`)
-//     newElement.innerHTML = `<img src="${item.img}" alt="${item.name}" class="gallery-our-friends__picture">
-//                             <h4 class="gallery-our-friends__title">${item.name}</h4>
-//                             <div class="btn btn--transparent"><a href="javascript:void(0);" class="btn__link">Learn more</a></div>`
-//     changedItem.appendChild(newElement);
-//     })
-  
-  
-
-//   leftSliderButton.addEventListener("click", moveLeft);
-//   rightSliderButton.addEventListener("click", moveRight);
-// })
+/*---------------slider----------------*/
 
 const swiper = new Swiper('.swiper', {
-  // Optional parameters
   direction: 'horizontal',
   loop: true,
 
-  // Navigation arrows
+  scrollbar: {
+    el: '.swiper-scrollbar',
+    draggable: true,
+  },
+
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
@@ -285,7 +207,6 @@ const swiper = new Swiper('.swiper', {
     slideShadows: true,
   },
   breakpoints: {
-    // when window width is >= 320px
     320: {
       spaceBetween: 10
     },
@@ -304,5 +225,22 @@ const swiper = new Swiper('.swiper', {
     1010: {
       spaceBetween: 110
     }
+  },
+  autoplay: {
+    delay: 5000,
+    disableOnInteraction: false,
+  },
+  observer: true,
+  a11y: {
+    enabled: true,
+    prevSlideMessage: 'Previous slide',
+    nextSlideMessage: 'Next slide',
+    firstSlideMessage: 'This is the first slide',
+    lastSlideMessage: 'This is the last slide',
+    paginationBulletMessage: 'Go to slide {{index}}',
+    notificationClass: 'swiper-notification',
+    containerMessage: '',
+    containerRoleDescriptionMessage: '',
+    itemRoleDescriptionMessage: '',
   }
 });
