@@ -1,7 +1,8 @@
 'use strict'
 const body = document.querySelector('body');
 
-//hamburger menu
+/*---------------menu-burger---------------*/
+
 const hamburger = document.querySelector('.hamburger');
 const headerList = document.querySelector('.header__list');
 const navLinks = document.querySelectorAll('.header__item');
@@ -10,7 +11,6 @@ function toggleMenu() {
 	hamburger.classList.toggle('open');
 	headerList.classList.toggle('open');
 	hamburgerOverlay.classList.toggle('open');
-	// body.style.overflow = 'hidden';
 	body.classList.toggle('overflow');
 }
 
@@ -26,7 +26,7 @@ hamburger.addEventListener('click', toggleMenu);
 hamburgerOverlay.addEventListener('click', closeMenu);
 navLinks.forEach((el) => el.addEventListener('click', closeMenu));
 
-//general array
+/*---------------general array----------------*/
 
 const generalArray = [
 	{
@@ -119,7 +119,8 @@ const generalArray = [
 	}
 ]
 
-//popup
+/*---------------popup----------------*/
+
 const galleryOurFriendsItem = document.querySelector('.body-gallery');
 const popup = document.querySelector('.popup');
 const popupOverlay = document.querySelector('.popup__overlay');
@@ -171,91 +172,6 @@ popupCloseButton.addEventListener('click', popupClose);
 popupOverlay.addEventListener('click', popupClose);
 
 
-const slider = document.querySelector('.gallery-our-friends__item');
-const slideLeftItem = document.querySelector('.item-left');
-const slideActiveItem = document.querySelector('.item-active');
-const sliderRightItem = document.querySelector('.item-right');
-// const sliderItems = document.querySelectorAll('.gallery-our-friends__card');
-const rightSliderButton = document.querySelector('.our-friends__arrow--right');
-const leftSliderButton = document.querySelector('.our-friends__arrow--left');
-
-// function generateSliderItem() {
-//   const newCards = generalArray.filter(e => ![...sliderItems].map(item => item.childNodes[3].innerText).includes(e.name))
-//   newCards.forEach(item => {
-//     const newElement = document.createElement('div');
-//     newElement.classList.add('gallery-our-friends__card');
-//     newElement.setAttribute('data-name', `${item.name}`)
-//     newElement.innerHTML = `<img src="${item.img}" alt="${item.name}" class="gallery-our-friends__picture">
-//                             <h4 class="gallery-our-friends__title">${item.name}</h4>
-//                             <div class="btn btn--transparent"><a href="javascript:void(0);" class="btn__link">Learn more</a></div>`
-//     slider.append(newElement);
-//   })
-//   slider.style.animation = `1s linear slideIn`;
-// }
-
-
-// rightSliderButton.addEventListener('click', generateSliderItem)
-
-
-// function generateStartItems(num) {
-//   generalArray.sort(() => 0.5 - Math.random()).slice(0, num).forEach(item => {
-//       const newElement = document.createElement('div');
-//       newElement.classList.add('gallery-our-friends__card');
-//       newElement.setAttribute('data-name', `${item.name}`)
-//       newElement.innerHTML = `<img src="${item.img}" alt="${item.name}" class="gallery-our-friends__picture">
-//                             <h4 class="gallery-our-friends__title">${item.name}</h4>
-//                             <div class="btn btn--transparent"><a href="javascript:void(0);" class="btn__link">Learn more</a></div>`
-//       slider.append(newElement);
-//   })
-// }
-
-// generateStartItems(3)
-
-// function moveLeft() {
-//   slider.classList.add('transition-left');
-//   leftSliderButton.removeEventListener('click', moveLeft);
-//   rightSliderButton.removeEventListener('click', moveRight);
-// }
-
-// function moveRight() {
-//   slider.classList.add('transition-right');
-//   leftSliderButton.removeEventListener('click', moveLeft);
-//   rightSliderButton.removeEventListener('click', moveRight);
-// }
-
-// rightSliderButton.addEventListener('click', moveRight);
-// leftSliderButton.addEventListener('click', moveLeft);
-
-// slider.addEventListener("animationend", (animationEvent) => {
-//   let changedItem;
-//   if (animationEvent.animationName === "move-left") {
-//     slider.classList.remove("transition-left");
-//     changedItem = slideLeftItem;
-//     document.querySelector(".item-active").innerHTML = slideLeftItem.innerHTML;
-//   } else {
-//     slider.classList.remove("transition-right");
-//     changedItem = sliderRightItem;
-//     document.querySelector(".item-active").innerHTML = sliderRightItem.innerHTML;
-//   }
-
-//   changedItem.innerHTML = "";
-
-//   generalArray.sort(() => 0.5 - Math.random()).slice(0, 3).map(item => {
-//     const newElement = document.createElement('div');
-//     newElement.classList.add('gallery-our-friends__card');
-//     newElement.setAttribute('data-name', `${item.name}`)
-//     newElement.innerHTML = `<img src="${item.img}" alt="${item.name}" class="gallery-our-friends__picture">
-//                             <h4 class="gallery-our-friends__title">${item.name}</h4>
-//                             <div class="btn btn--transparent"><a href="javascript:void(0);" class="btn__link">Learn more</a></div>`
-//     changedItem.appendChild(newElement);
-//     })
-  
-  
-
-//   leftSliderButton.addEventListener("click", moveLeft);
-//   rightSliderButton.addEventListener("click", moveRight);
-// })
-
 /*---------------slider----------------*/
 
 const swiper = new Swiper('.swiper', {
@@ -264,19 +180,17 @@ const swiper = new Swiper('.swiper', {
 
   pagination: {
     el: '.swiper-pagination',
+    clickable: true,
+    dynamicBullets: true,
+    dynamicMainBullets: 1,
+    renderBullet: function (index, className) {
+      return '<span class="' + className + '">' + (index + 1) + '</span>';
+    },
   },
 
   slidesPerView: 4,
-
-  // grid: {
-  //   fill: column,
-  //   rows: 2,
-  // },
-
   spaceBetween: 30,
-  hashNavigation: {
-    watchState: true,
-  },
+
   keyboard: {
     enabled: true,
     onlyInViewport: true,
@@ -285,33 +199,29 @@ const swiper = new Swiper('.swiper', {
     eventsTarget: '.swiper',
   },
   watchOverflow: true,
-  centeredSlides: true,
-  initialSlide: 1,
-  // effect: 'coverflow',
-  // coverflowEffect: {
-  //   rotate: 30,
-  //   slideShadows: true,
-  // },
-  // breakpoints: {
-  //   320: {
-  //     spaceBetween: 10
-  //   },
-  //   480: {
-  //     spaceBetween: 20
-  //   },
-  //   500: {
-  //     spaceBetween: 30
-  //   },
-  //   800: {
-  //     spaceBetween: 60
-  //   },
-  //   950: {
-  //     spaceBetween: 90
-  //   },
-  //   1010: {
-  //     spaceBetween: 110
-  //   }
-  // },
+  centeredSlides: false,
+  initialSlide: 0,
+
+  scrollbar: {
+    el: '.swiper-scrollbar',
+    draggable: true,
+  },
+
+  breakpoints: {
+    300: {
+      slidesPerView: 2,
+    },
+    420: {
+      slidesPerView: 2,
+      spaceBetween: 30,
+    },
+    590: {
+      slidesPerView: 3,
+    },
+    768: {
+      slidesPerView: 4,
+    }
+  },
   autoplay: {
     delay: 5000,
     disableOnInteraction: false,

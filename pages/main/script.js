@@ -188,9 +188,6 @@ const swiper = new Swiper('.swiper', {
 
   slidesPerView: 3,
   spaceBetween: 90,
-  hashNavigation: {
-    watchState: true,
-  },
   keyboard: {
     enabled: true,
     onlyInViewport: true,

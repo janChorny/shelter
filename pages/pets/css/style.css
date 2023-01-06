@@ -493,10 +493,11 @@ h6 {
 
 /*----------------Header-----------------------*/
 .header {
-  padding: 30px 40px;
+  padding: 30px 40px 20px 15px;
   background: #ffffff;
   position: -webkit-sticky;
   position: sticky;
+  z-index: 4;
   top: 0px;
 }
 
@@ -747,6 +748,7 @@ h6 {
 
 .gallery__container {
   min-width: 0;
+  text-align: center;
 }
 
 .gallery__title {
@@ -791,6 +793,8 @@ h6 {
 }
 
 .body-gallery__card {
+  max-width: 270px;
+  overflow: hidden;
   background: #FAFAFA;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -822,6 +826,10 @@ h6 {
   background: #FDDCC4;
 }
 
+.body-gallery__picture {
+  max-width: 100%;
+}
+
 .body-gallery__title {
   font-family: Georgia-regular;
   font-style: normal;
@@ -832,50 +840,21 @@ h6 {
   color: #545454;
 }
 
-.arrow {
-  width: 52px;
-  height: 52px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  border-radius: 100px;
-  font-family: Arial-regular;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 1.25rem;
-  line-height: 115%;
-  letter-spacing: 0.06em;
-  border: 2px solid #F1CDB3;
-  color: #292929;
+@media (max-width: 488px) {
+  .body-gallery__card .btn__link {
+    visibility: hidden;
+    position: relative;
+  }
+  .body-gallery__card .btn__link:after {
+    visibility: visible;
+    position: absolute;
+    top: 0;
+    left: 25%;
+    content: "More";
+  }
 }
 
-.arrow--previos {
-  color: #CDCDCD;
-  border: 2px solid #CDCDCD;
-}
-
-.arrow--actual {
-  background: #F1CDB3;
-}
-
-.arrow--further {
-  border: 2px solid #F1CDB3;
-}
-
-.arrow--further:hover {
-  background: #FDDCC4;
-  border: none;
-  cursor: pointer;
-}
-
+/*--------------popup----------------*/
 .popup {
   position: fixed;
   width: 100%;
@@ -1006,6 +985,7 @@ h6 {
 @media (max-width: 440px) {
   .popup__description {
     padding: 10px;
+    word-break: break-all;
   }
 }
 
@@ -1121,22 +1101,32 @@ h6 {
 
 /*--------------slider----------------*/
 .swiper {
-  max-width: 990px;
-}
-
-.swiper {
-  z-index: auto !important;
+  max-width: 1170px;
+  z-index: 0 !important;
 }
 
 .swiper-wrapper {
-  z-index: auto !important;
+  z-index: 0 !important;
+  margin-top: 40px;
+  margin-bottom: 90px;
 }
 
 .swiper .swiper-pagination-bullet {
-  width: 20px;
-  height: 20px;
-  line-height: 20px;
-  font-size: 14px;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  font-size: 40px;
+  font-weight: 500;
+  color: #fff;
+}
+
+.swiper-scrollbar-drag {
+  cursor: pointer;
+}
+
+.swiper-horizontal > .swiper-scrollbar,
+.swiper-scrollbar.swiper-scrollbar-horizontal {
+  background: lightgray;
 }
 
 /*----------------Footer-----------------------*/
