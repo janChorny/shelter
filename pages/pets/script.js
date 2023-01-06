@@ -1,7 +1,8 @@
 'use strict'
 const body = document.querySelector('body');
 
-//hamburger menu
+/*---------------menu-burger---------------*/
+
 const hamburger = document.querySelector('.hamburger');
 const headerList = document.querySelector('.header__list');
 const navLinks = document.querySelectorAll('.header__item');
@@ -10,7 +11,6 @@ function toggleMenu() {
 	hamburger.classList.toggle('open');
 	headerList.classList.toggle('open');
 	hamburgerOverlay.classList.toggle('open');
-	// body.style.overflow = 'hidden';
 	body.classList.toggle('overflow');
 }
 
@@ -26,7 +26,7 @@ hamburger.addEventListener('click', toggleMenu);
 hamburgerOverlay.addEventListener('click', closeMenu);
 navLinks.forEach((el) => el.addEventListener('click', closeMenu));
 
-//general array
+/*---------------general array----------------*/
 
 const generalArray = [
 	{
@@ -97,7 +97,7 @@ const generalArray = [
 	},
 	{
 		"name": "Freddie",
-		"img": "../../assets/images/pets-fredie_no-bg.webp",
+		"img": "../../assets/images/pets-freddie_no-bg.webp",
 		"type": "Cat",
 		"breed": "British Shorthair",
 		"description": "Freddie is a little shy at first, but very sweet when he warms up. He likes playing with shoe strings and bottle caps. He is quick to learn the rhythms of his human’s daily life. Freddie has bounced around a lot in his life, and is looking to find his forever home.",
@@ -119,7 +119,8 @@ const generalArray = [
 	}
 ]
 
-//popup
+/*---------------popup----------------*/
+
 const galleryOurFriendsItem = document.querySelector('.body-gallery');
 const popup = document.querySelector('.popup');
 const popupOverlay = document.querySelector('.popup__overlay');
@@ -169,3 +170,73 @@ popupOpenCards.forEach(element => {
 });
 popupCloseButton.addEventListener('click', popupClose);
 popupOverlay.addEventListener('click', popupClose);
+
+
+/*---------------slider----------------*/
+
+const swiper = new Swiper('.swiper', {
+  direction: 'horizontal',
+  loop: true,
+
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+    dynamicBullets: true,
+    dynamicMainBullets: 1,
+    renderBullet: function (index, className) {
+      return '<span class="' + className + '">' + (index + 1) + '</span>';
+    },
+  },
+
+  slidesPerView: 4,
+  spaceBetween: 30,
+
+  keyboard: {
+    enabled: true,
+    onlyInViewport: true,
+  },
+  mousewheel: {
+    eventsTarget: '.swiper',
+  },
+  watchOverflow: true,
+  centeredSlides: false,
+  initialSlide: 0,
+
+  scrollbar: {
+    el: '.swiper-scrollbar',
+    draggable: true,
+  },
+
+  breakpoints: {
+    300: {
+      slidesPerView: 2,
+    },
+    420: {
+      slidesPerView: 2,
+      spaceBetween: 30,
+    },
+    590: {
+      slidesPerView: 3,
+    },
+    768: {
+      slidesPerView: 4,
+    }
+  },
+  autoplay: {
+    delay: 5000,
+    disableOnInteraction: false,
+  },
+  observer: true,
+  a11y: {
+    enabled: true,
+    prevSlideMessage: 'Previous slide',
+    nextSlideMessage: 'Next slide',
+    firstSlideMessage: 'This is the first slide',
+    lastSlideMessage: 'This is the last slide',
+    paginationBulletMessage: 'Go to slide {{index}}',
+    notificationClass: 'swiper-notification',
+    containerMessage: '',
+    containerRoleDescriptionMessage: '',
+    itemRoleDescriptionMessage: '',
+  }
+});

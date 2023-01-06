@@ -11,6 +11,8 @@
 	}
 
 	&__container {
+    min-width: 0;
+    text-align: center;
 	}
 
 	&__title {
@@ -29,10 +31,7 @@
 		@media (max-width: 320px){
 			margin-bottom: 42px;
 			font-size: 1.5625rem;
-	}
-	}
-
-	&__body {
+	 }
 	}
 
 	&__controls {
@@ -45,34 +44,10 @@
 	}
 }
 .body-gallery {
-	display: grid;
-	grid-template-columns: repeat(4, 1fr);
-	row-gap: 30px;
-	column-gap: 40px;
-	margin-bottom: 60px;
-	@media (max-width: 1279px){
-		grid-template-columns: repeat(3, 1fr);
-		margin: 0px 20px;
-		max-height: 1365px;
-		overflow: hidden;
-		margin-bottom: 40px;
-	}
-	@media (max-width: 1030px){
-		grid-template-columns: repeat(2, 1fr);
-		margin: 0px 50px;
-		margin-bottom: 40px;
-	}
-	@media (max-width: 767px){
-		grid-template-columns: repeat(1, 1fr);
-		margin: 0px 15px;
-		margin-bottom: 40px;
-	}
-	@media (max-width: 320px){
-		margin: 0px 15px;
-		margin-bottom: 40px;
-	}
 
 	&__card {
+    max-width: 270px;
+    overflow: hidden;
 		background: $color-bg--3;
 		display: flex;
 		flex-direction: column;
@@ -81,7 +56,7 @@
 		gap: 30px;
 		padding-bottom: 30px;
 		border-radius: 9px;
-	}
+  }
 
 	&__card:hover {
 		cursor: pointer;
@@ -94,6 +69,7 @@
 	}
 
 	&__picture {
+    max-width: 100%;
 	}
 
 	&__title {
@@ -106,46 +82,22 @@
 		color: $color-text-title--section;
 	}
 }
-.btn {
-	&__link {
-	}
-}
-.btn--transparent {
-}
-.arrow {
-	width: 52px;
-	height: 52px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	box-sizing: border-box;
-	border-radius: 100px;
-	font-family: Arial-regular;
-	font-style: normal;
-	font-weight: 400;
-	font-size: 1.25rem;
-	line-height: 115%;
-	letter-spacing: 0.06em;
-	border: 2px solid $color-btn;
-	color: #292929;
-}
-.arrow--previos {
-	color: $color-btn--arrow-inactive;
-	border: 2px solid $color-btn--arrow-inactive;
-}
-.arrow--actual {
-	background: $color-btn;
-}
-.arrow--further {
-	border: 2px solid $color-btn;
-}
-.arrow--further:hover {
-	background: $color-btn--hover;
-	border: none;
-	cursor: pointer;
+
+@media (max-width: 488px) {
+  .body-gallery__card .btn__link {
+    visibility: hidden;
+    position: relative;
+  }
+  .body-gallery__card .btn__link:after {
+    visibility: visible;
+    position: absolute;
+    top: 0;
+    left: 25%;
+    content: "More";
+  }
 }
 
-//popup
+/*--------------popup----------------*/
 
 .popup {
 	position: fixed;
@@ -159,23 +111,12 @@
 	overflow-y: auto;
 	transition: all 0.8s ease 0s;
 
-	// &:target{
-	// 	opacity: 1;
-	// 	visibility: visible;
-	// }
-	// &:target .popup__content {
-	// 	transform: translate(0px, 0px);
-	// 	transform: perspective(600px) translate(0px, 0px) rotate(0);
-	// 	opacity: 1;
-	// }
-
 	&.open {
 		opacity: 1;
 		visibility: visible;
 	}
 
 	&.open .popup__content {
-		// transform: translate(0px, 0px);
 		transform: perspective(600px) translate(0px, 0px) rotate(0);
 		opacity: 1;
 	}
@@ -223,7 +164,6 @@
 		border-radius: 9px;
 		box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
 		margin: 0px 60px;
-		// transform: translate(0px, -100%);
 		transform: perspective(600px) translate(0px, -100%) rotate(45deg);
 		opacity: 0;
 		transition: all 0.8s ease 0s;
@@ -235,8 +175,6 @@
 		background-position: center;
 		background-repeat: no-repeat;
 		background-size: contain;
-
-		@media (max-width: 768px) {}
 
 		@media (max-width: 767px) {
 			display: none;
@@ -258,6 +196,7 @@
 
 		@media (max-width: 440px) {
 			padding: 10px;
+      word-break: break-all;
 		}
 	}
 
@@ -316,9 +255,6 @@
 		}
 	}
 
-	&__list {}
-
-
 	&__item {
 		list-style: none;
 		position: relative;
@@ -348,14 +284,6 @@
 		background: #F1CDB3;
 	}
 
-	&__item--age {}
-
-	&__item--inoculations {}
-
-	&__item--deseases {}
-
-	&__item--parasites {}
-
 	&__overlay{
 		display: none;
 	}
@@ -368,4 +296,35 @@
 			height: 100%;
 			z-index: 2;
 	}
+}
+
+/*--------------slider----------------*/
+
+.swiper {
+  max-width: 1170px;
+  z-index: 0 !important;
+}
+
+.swiper-wrapper {
+  z-index: 0 !important;
+  margin-top: 40px;
+  margin-bottom: 90px;
+}
+
+.swiper .swiper-pagination-bullet {
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  font-size: 40px;
+  font-weight: 500;
+  color: #fff;
+}
+
+.swiper-scrollbar-drag {
+	cursor: pointer;
+}
+
+.swiper-horizontal>.swiper-scrollbar, 
+.swiper-scrollbar.swiper-scrollbar-horizontal {
+background: lightgray;
 }
