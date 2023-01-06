@@ -483,6 +483,13 @@ h6 {
   width: 187px;
 }
 
+@media (max-width: 488px) {
+  .btn--transparent {
+    width: 100px;
+    line-height: 10px;
+  }
+}
+
 /*----------------Main-----------------------*/
 .main {
   -webkit-box-flex: 1;
