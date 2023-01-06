@@ -8,6 +8,8 @@
   <link rel="icon" href="../../assets/images/favicon--pets2.ico">
   <link rel="stylesheet" href="./css/style.css">
   <title>Pets</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 </head>
 
 <body>
@@ -39,52 +41,62 @@
     <main class="main">
       <section class="gallery">
         <div class="gallery__container container">
+
           <h3 class="gallery__title">
             Our friends who<br />
             are looking for a house
           </h3>
-          <div class="gallery__body body-gallery">				
-            <div class="body-gallery__card" data-name="Katrine">
-              <img src="../../assets/images/pets-katrine_no_bg.webp" alt="Katrine" class="body-gallery__picture">
-              <h4 class="body-gallery__title">Katrine</h4>
-              <div class="btn btn--transparent"><a href="javascript:void(0);" class="btn__link">Learn more</a></div>
+
+          <div class="swiper">
+            <div class="gallery__body body-gallery swiper-wrapper">				
+              <div class="body-gallery__card swiper-slide" data-name="Katrine" data-hash="slide1">
+                <img src="../../assets/images/pets-katrine_no_bg.webp" alt="Katrine" class="body-gallery__picture">
+                <h4 class="body-gallery__title">Katrine</h4>
+                <div class="btn btn--transparent"><a href="javascript:void(0);" class="btn__link">Learn more</a></div>
+              </div>
+              <div class="body-gallery__card swiper-slide" data-name="Jennifer" data-hash="slide2">
+                <img src="../../assets/images/pets-jennifer_no_bg.webp" alt="Jennifer" class="body-gallery__picture">
+                <h4 class="body-gallery__title">Jennifer</h4>
+                <div class="btn btn--transparent jennifer-button"><a href="javascript:void(0);" class="btn__link">Learn more</a></div>
+              </div>
+              <div class="body-gallery__card swiper-slide" data-name="Woody" data-hash="slide3">
+                <img src="../../assets/images/pets-woody_no_bg.webp" alt="Woody" class="body-gallery__picture">
+                <h4 class="body-gallery__title">Woody</h4>
+                <div class="btn btn--transparent"><a href="javascript:void(0);" class="btn__link">Learn more</a></div>
+              </div>
+              <div class="body-gallery__card swiper-slide" data-name="Sophia" data-hash="slide4">
+                <img src="../../assets/images/pets-sophia.webp" alt="Sophia" class="body-gallery__picture">
+                <h4 class="body-gallery__title">Sophia</h4>
+                <div class="btn btn--transparent"><a href="javascript:void(0);" class="btn__link">Learn more</a></div>
+              </div>
+              <div class="body-gallery__card swiper-slide" data-name="Timmy" data-hash="slide5">
+                <img src="../../assets/images/pets-timmy_no-bg.webp" alt="Timmy" class="body-gallery__picture">
+                <h4 class="body-gallery__title">Timmy</h4>
+                <div class="btn btn--transparent"><a href="javascript:void(0);" class="btn__link">Learn more</a></div>
+              </div>
+              <div class="body-gallery__card swiper-slide" data-name="Charly" data-hash="slide6">
+                <img src="../../assets/images/pets-charly.webp" alt="Charly" class="body-gallery__picture">
+                <h4 class="body-gallery__title">Charly</h4>
+                <div class="btn btn--transparent"><a href="javascript:void(0);" class="btn__link">Learn more</a></div>
+              </div>
+              <div class="body-gallery__card swiper-slide" data-name="Scarlett" data-hash="slide7">
+                <img src="../../assets/images/pets-scarlet_no-bg.webp" alt="Scarlett" class="body-gallery__picture">
+                <h4 class="body-gallery__title">Scarlett</h4>
+                <div class="btn btn--transparent"><a href="javascript:void(0);" class="btn__link">Learn more</a></div>
+              </div>
+              <div class="body-gallery__card swiper-slide" data-name="Freddie" data-hash="slide8">
+                <img src="../../assets/images/pets-freddie_no-bg.webp" alt="Freddie" class="body-gallery__picture">
+                <h4 class="body-gallery__title">Freddie</h4>
+                <div class="btn btn--transparent"><a href="javascript:void(0);" class="btn__link">Learn more</a></div>
+              </div>
             </div>
-            <div class="body-gallery__card" data-name="Jennifer">
-              <img src="../../assets/images/pets-jennifer_no_bg.webp" alt="Jennifer" class="body-gallery__picture">
-              <h4 class="body-gallery__title">Jennifer</h4>
-              <div class="btn btn--transparent jennifer-button"><a href="javascript:void(0);" class="btn__link">Learn more</a></div>
-            </div>
-            <div class="body-gallery__card" data-name="Woody">
-              <img src="../../assets/images/pets-woody_no_bg.webp" alt="Woody" class="body-gallery__picture">
-              <h4 class="body-gallery__title">Woody</h4>
-              <div class="btn btn--transparent"><a href="javascript:void(0);" class="btn__link">Learn more</a></div>
-            </div>
-            <div class="body-gallery__card" data-name="Sophia">
-              <img src="../../assets/images/pets-sophia.webp" alt="Sophia" class="body-gallery__picture">
-              <h4 class="body-gallery__title">Sophia</h4>
-              <div class="btn btn--transparent"><a href="javascript:void(0);" class="btn__link">Learn more</a></div>
-            </div>
-            <div class="body-gallery__card" data-name="Timmy">
-              <img src="../../assets/images/pets-timmy_no-bg.webp" alt="Timmy" class="body-gallery__picture">
-              <h4 class="body-gallery__title">Timmy</h4>
-              <div class="btn btn--transparent"><a href="javascript:void(0);" class="btn__link">Learn more</a></div>
-            </div>
-            <div class="body-gallery__card" data-name="Charly">
-              <img src="../../assets/images/pets-charly.webp" alt="Charly" class="body-gallery__picture">
-              <h4 class="body-gallery__title">Charly</h4>
-              <div class="btn btn--transparent"><a href="javascript:void(0);" class="btn__link">Learn more</a></div>
-            </div>
-            <div class="body-gallery__card" data-name="Scarlett">
-              <img src="../../assets/images/pets-scarlet_no-bg.webp" alt="Scarlett" class="body-gallery__picture">
-              <h4 class="body-gallery__title">Scarlett</h4>
-              <div class="btn btn--transparent"><a href="javascript:void(0);" class="btn__link">Learn more</a></div>
-            </div>
-            <div class="body-gallery__card" data-name="Freddie">
-              <img src="../../assets/images/pets-freddie_no-bg.webp" alt="Freddie" class="body-gallery__picture">
-              <h4 class="body-gallery__title">Freddie</h4>
-              <div class="btn btn--transparent"><a href="javascript:void(0);" class="btn__link">Learn more</a></div>
-            </div>
+
+            <div class="swiper-pagination"></div>
+
           </div>
+
+
+
           <div class="gallery__controls">
             <div class="arrow arrow--previos">&lt;&lt;</div>
             <div class="arrow arrow--previos">&lt;</div>
@@ -92,6 +104,7 @@
             <div class="arrow arrow--further">&gt;</div>
             <div class="arrow arrow--further">&gt;&gt;</div>
           </div>
+
         </div>
       </section>
     </main>

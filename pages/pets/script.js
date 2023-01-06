@@ -97,7 +97,7 @@ const generalArray = [
 	},
 	{
 		"name": "Freddie",
-		"img": "../../assets/images/pets-fredie_no-bg.webp",
+		"img": "../../assets/images/pets-freddie_no-bg.webp",
 		"type": "Cat",
 		"breed": "British Shorthair",
 		"description": "Freddie is a little shy at first, but very sweet when he warms up. He likes playing with shoe strings and bottle caps. He is quick to learn the rhythms of his human’s daily life. Freddie has bounced around a lot in his life, and is looking to find his forever home.",
@@ -255,3 +255,78 @@ const leftSliderButton = document.querySelector('.our-friends__arrow--left');
 //   leftSliderButton.addEventListener("click", moveLeft);
 //   rightSliderButton.addEventListener("click", moveRight);
 // })
+
+/*---------------slider----------------*/
+
+const swiper = new Swiper('.swiper', {
+  direction: 'horizontal',
+  loop: true,
+
+  pagination: {
+    el: '.swiper-pagination',
+  },
+
+  slidesPerView: 4,
+
+  // grid: {
+  //   fill: column,
+  //   rows: 2,
+  // },
+
+  spaceBetween: 30,
+  hashNavigation: {
+    watchState: true,
+  },
+  keyboard: {
+    enabled: true,
+    onlyInViewport: true,
+  },
+  mousewheel: {
+    eventsTarget: '.swiper',
+  },
+  watchOverflow: true,
+  centeredSlides: true,
+  initialSlide: 1,
+  // effect: 'coverflow',
+  // coverflowEffect: {
+  //   rotate: 30,
+  //   slideShadows: true,
+  // },
+  // breakpoints: {
+  //   320: {
+  //     spaceBetween: 10
+  //   },
+  //   480: {
+  //     spaceBetween: 20
+  //   },
+  //   500: {
+  //     spaceBetween: 30
+  //   },
+  //   800: {
+  //     spaceBetween: 60
+  //   },
+  //   950: {
+  //     spaceBetween: 90
+  //   },
+  //   1010: {
+  //     spaceBetween: 110
+  //   }
+  // },
+  autoplay: {
+    delay: 5000,
+    disableOnInteraction: false,
+  },
+  observer: true,
+  a11y: {
+    enabled: true,
+    prevSlideMessage: 'Previous slide',
+    nextSlideMessage: 'Next slide',
+    firstSlideMessage: 'This is the first slide',
+    lastSlideMessage: 'This is the last slide',
+    paginationBulletMessage: 'Go to slide {{index}}',
+    notificationClass: 'swiper-notification',
+    containerMessage: '',
+    containerRoleDescriptionMessage: '',
+    itemRoleDescriptionMessage: '',
+  }
+});
