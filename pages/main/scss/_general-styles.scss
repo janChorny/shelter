@@ -66,6 +66,13 @@
 	width: 187px;
 }
 
+@media (max-width: 488px) {
+  .btn--transparent {
+    width: 70px;
+    line-height: 10px;
+  }
+}
+
 /*----------------Main-----------------------*/
 
 .main {
