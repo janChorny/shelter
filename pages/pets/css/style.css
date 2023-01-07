@@ -483,10 +483,15 @@ h6 {
   width: 187px;
 }
 
+@media (max-width: 964px) {
+  .btn--transparent {
+    width: 140px;
+  }
+}
+
 @media (max-width: 488px) {
   .btn--transparent {
     width: 100px;
-    line-height: 10px;
   }
 }
 
@@ -855,8 +860,8 @@ h6 {
   .body-gallery__card .btn__link:after {
     visibility: visible;
     position: absolute;
-    top: 0;
-    left: 25%;
+    top: 25%;
+    left: 30%;
     content: "More";
   }
 }
