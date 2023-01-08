@@ -116,7 +116,7 @@
 		visibility: visible;
 	}
 
-	&.open .popup__content {
+	&.open .popup__container {
 		transform: perspective(600px) translate(0px, 0px) rotate(0);
 		opacity: 1;
 	}
@@ -155,7 +155,11 @@
 	}
 
 	&__content {
-		position: relative;
+    padding-top: 180px;
+	}
+
+  &__container {
+    position: relative;
 		z-index: 3;
 		display: flex;
 		max-width: 900px;
@@ -167,7 +171,7 @@
 		transform: perspective(600px) translate(0px, -100%) rotate(45deg);
 		opacity: 0;
 		transition: all 0.8s ease 0s;
-	}
+  }
 
 	&__image {
 		flex: 1 1 56%;
