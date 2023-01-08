@@ -483,10 +483,15 @@ h6 {
   width: 187px;
 }
 
+@media (max-width: 964px) {
+  .btn--transparent {
+    width: 140px;
+  }
+}
+
 @media (max-width: 488px) {
   .btn--transparent {
     width: 100px;
-    line-height: 10px;
   }
 }
 
@@ -855,8 +860,8 @@ h6 {
   .body-gallery__card .btn__link:after {
     visibility: visible;
     position: absolute;
-    top: 0;
-    left: 25%;
+    top: 25%;
+    left: 30%;
     content: "More";
   }
 }
@@ -881,7 +886,7 @@ h6 {
   visibility: visible;
 }
 
-.popup.open .popup__content {
+.popup.open .popup__container {
   -webkit-transform: perspective(600px) translate(0px, 0px) rotate(0);
           transform: perspective(600px) translate(0px, 0px) rotate(0);
   opacity: 1;
@@ -929,6 +934,10 @@ h6 {
 }
 
 .popup__content {
+  padding-top: 180px;
+}
+
+.popup__container {
   position: relative;
   z-index: 3;
   display: -webkit-box;

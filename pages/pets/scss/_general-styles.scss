@@ -64,10 +64,15 @@
 	width: 187px;
 }
 
+@media (max-width: 964px) {
+  .btn--transparent {
+    width: 140px;
+  }
+}
+
 @media (max-width: 488px) {
   .btn--transparent {
     width: 100px;
-    line-height: 10px;
   }
 }
 

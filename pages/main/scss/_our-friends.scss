@@ -92,8 +92,8 @@ position: relative;
   .gallery-our-friends__card .btn__link:after {
     visibility: visible;
     position: absolute;
-    top: 0;
-    left: 25%;
+    top: 25%;
+    left: 20%;
     content: "More";
   }
 }
@@ -103,7 +103,7 @@ position: relative;
 .popup {
 	position: fixed;
 	width: 100%;
-	height:100%;
+	height: 100%;
 	background: rgba(41, 41, 41, 0.6);
 	top: 0;
 	left: 0;
@@ -116,8 +116,8 @@ position: relative;
 		opacity: 1;
 		visibility: visible;
 	}
-	
-	&.open .popup__content {
+
+	&.open .popup__container {
 		transform: perspective(600px) translate(0px, 0px) rotate(0);
 		opacity: 1;
 	}
@@ -129,7 +129,7 @@ position: relative;
 		align-items: center;
 		justify-content: center;
 	}
-	
+
 	&__close {
 		position: absolute;
 		top: -50px;
@@ -142,20 +142,25 @@ position: relative;
 		border: 2px solid #F1CDB3;
 		border-radius: 100px;
 		z-index: 4;
+
 		@media (max-width: 767px) {
 			top: -55px;
 			right: -30px;
 		}
 	}
 
-	&__close:hover{
-		background: url('../../../assets/icons/Icon-close-popup.svg'),#FDDCC4;
+	&__close:hover {
+		background: url('../../../assets/icons/Icon-close-popup.svg'), #FDDCC4;
 		background-position: center center;
 		background-repeat: no-repeat no-repeat;
 	}
 
 	&__content {
-		position: relative;
+    padding-top: 60px;
+	}
+
+  &__container {
+    position: relative;
 		z-index: 3;
 		display: flex;
 		max-width: 900px;
@@ -167,7 +172,7 @@ position: relative;
 		transform: perspective(600px) translate(0px, -100%) rotate(45deg);
 		opacity: 0;
 		transition: all 0.8s ease 0s;
-	}
+  }
 
 	&__image {
 		flex: 1 1 56%;
@@ -175,9 +180,7 @@ position: relative;
 		background-position: center;
 		background-repeat: no-repeat;
 		background-size: contain;
-		@media (max-width: 768px) {
-			
-		}
+
 		@media (max-width: 767px) {
 			display: none;
 		}
@@ -187,15 +190,18 @@ position: relative;
 		flex: 1 1 44%;
 		flex-direction: column;
 		padding: 55px 20px 85px 29px;
+
 		@media (max-width: 768px) {
 			padding: 10px 9px 37px 11px;
 		}
-			@media (max-width: 767px) {
-				flex: 1 1 100%;
-			}
+
+		@media (max-width: 767px) {
+			flex: 1 1 100%;
+		}
+
 		@media (max-width: 440px) {
-				padding: 10px;
-        word-break: break-all;
+			padding: 10px;
+      word-break: break-all;
 		}
 	}
 
@@ -208,9 +214,10 @@ position: relative;
 		letter-spacing: 0.06em;
 		color: #000000;
 		margin-bottom: 10px;
-				@media (max-width: 440px) {
-					text-align: center;
-				}
+
+		@media (max-width: 440px) {
+			text-align: center;
+		}
 	}
 
 	&__subtitle {
@@ -222,12 +229,14 @@ position: relative;
 		letter-spacing: 0.06em;
 		color: #000000;
 		margin-bottom: 40px;
-			@media (max-width: 768px) {
-				margin-bottom: 20px;
-			}
-			@media (max-width: 440px) {
-				text-align: center;
-			}
+
+		@media (max-width: 768px) {
+			margin-bottom: 20px;
+		}
+
+		@media (max-width: 440px) {
+			text-align: center;
+		}
 	}
 
 	&__text {
@@ -239,14 +248,16 @@ position: relative;
 		letter-spacing: 0.06em;
 		color: #000000;
 		margin-bottom: 40px;
-			@media (max-width: 768px) {
-				font-size: 0.8125rem;
-				margin-bottom: 20px;
-			}
-			@media (max-width: 440px) {
-				text-align:justify;
-				margin-bottom: 24px;
-			}
+
+		@media (max-width: 768px) {
+			font-size: 0.8125rem;
+			margin-bottom: 20px;
+		}
+
+		@media (max-width: 440px) {
+			text-align: justify;
+			margin-bottom: 24px;
+		}
 	}
 
 	&__item {
@@ -261,34 +272,34 @@ position: relative;
 		letter-spacing: 0.06em;
 		color: #000000;
 		margin-bottom: 10px;
-			@media (max-width: 768px) {
-				margin-bottom: 5px;
-			}
+
+		@media (max-width: 768px) {
+			margin-bottom: 5px;
+		}
 	}
 
 	&__item::before {
-    content: '';
+		content: '';
 		position: absolute;
-		left:0;
-		top:50%;
+		left: 0;
+		top: 50%;
 		height: 4px;
 		width: 4px;
 		text-align: right;
 		background: #F1CDB3;
 	}
 
-	&__overlay {
+	&__overlay{
 		display: none;
 	}
-	
 	&__overlay.open {
-		display: block;
-		position: fixed;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		z-index: 2;
+			display: block;
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			z-index: 2;
 	}
 }
 
